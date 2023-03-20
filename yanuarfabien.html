@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan DOM Yanuar Fabien</title>
+    <style>
+        body{
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+        }
+        main{
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        article section{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <article>
+            <header>
+                <h1>Ringkasan DOM Yanuar Fabien</h1>
+            </header>
+    
+            <section>
+                <h2>Video 1: Javascript & DOM #1 - Pendahuluan</h2>
+                <p>Document Object Model atau disingkat DOM dapat dipecah menjadi 3 kata yaitu <i>Document</i>, <i>Object</i>, dan <i>Model</i>. Ketiga kata ini jika didefinisikan masing masing menjadi:</p>
+                <ol>
+                    <li><i>Document</i>: Isi dari sebuah website</li>
+                    <li><i>Object</i>: Sebuah nilai atau tipe data dalam JavaScript yang memiliki <i>property</i> dan <i>method</i> yang strukturnya dapat dimanipulasi</li>
+                    <li><i>Model</i>: Representasi terhadap sesuatu</li>
+                </ol>
+                <p>Sehingga dari ketiga kata tersebut, definisi sederhana dari DOM adalah representasi elemen HTML pada dokumen yang nantinya akan menjadi sebuah <i>object</i> yang strukturnya dapat dimanipulasi. Pada memory, DOM akan tersimpan sebagai pohon hirarki DOM atau biasa disebut <i>DOM Tree</i>.</p>
+                <p>Ada beberapa hal yang dapat dipelajari untuk menguasai DOM yaitu:</p>
+                <ol>
+                    <li>DOM Selection: Bagaimana cara untuk memilih atau mengakses elemen HTML dengan JavaScript</li>
+                    <li>DOM Manipulation: Bagaimana cara untuk memanipulasi elemen HTML dengan JavaScript</li>
+                    <li>DOM Traversal: Bagaimana cara untuk menelusuri elemen HTML lewat HTML lain</li>
+                    <li>Event Handling: Bagaimana cara melakukan sesuatu saat ada <i>trigger</i> pada DOM</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Video 2: Javascript & DOM #2 - DOM Tree</h2>
+                <p><i>DOM Tree</i> adalah representasi elemen-elemen HTML pada browser. Tiap elemen pada <i>DOM Tree</i> dapat disebut dengan <i>node</i> atau simpul. Simpul paling atas disebut simpul <i>root</i> atau <i>document</i>. <i>Node</i> dari <i>DOM Tree</i> memiliki banyak tipe, namun dalam mempelajari <i>DOM Tree</i> biasanya hanya berfokus pada 3 tipe yaitu:</p>
+                <ol>
+                    <li>Elemen</li>
+                    <li>Text</li>
+                    <li>Document</li>
+                </ol>
+                <p>Ada 2 istilah tipe dari kumpulan <i>node</i> yang harus dipahami yaitu:</p>
+                <ol>
+                    <li>NodeList: Kumpulan <i>node</i> yang dipilih (lebih dari 1 <i>node</i>) apapun tipenya </li>
+                    <li>HTMLCollection: Kumpulan <i>node</i> yang dipilih (lebih dari 1 <i>node</i>) dengan tipe elemen</li>
+                </ol>
+                <p>Struktur data dari kumpulan <i>node</i> mirip seperti array. Adapun struktur hirarki dari DOM yaitu:</p>
+                <ol>
+                    <li>Root Node: <i>node</i> yang menjadi sumber dari semua <i>node</i> lain di dalam <i>DOM</i></li>
+                    <li>Parent Node: <i>node</i> yang berada 1 tingkat diatas <i>node</i> lain</li>
+                    <li>Child Node: <i>node</i> yang berada 1 tingkat dibawah <i>node</i> lain</li>
+                    <li>Siblings Node: <i>node</i> yang memiliki <i>parent</i> yang sama</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Video 3: TUTORIAL JAVASCRIPT DOM (BAHASA INDONESIA)</h2>
+                <p>Ketika sebuah website di <i>load</i> oleh Browser, maka Browser akan membuat Document Object Model untuk halaman website tersebut dalam bentuk pohon atau <i>tree</i> yang dapat dimanipulasi dengan JavaScript. Adapun beberapa tipe data dalam DOM yaitu:</p>
+                <ol>
+                    <li>Document: Representasi dari halaman web. Dalam satu halaman web terdapat satu <i>document</i>. <i>Document</i> memiliki <i>property</i> yang dapat digunakan untuk melihat secara detail data yang terdapat pada <i>document</i> dari suatu halaman web. Selain itu, <i>document</i> juga memiliki <i>method</i> yang biasanya dapat digunakan untuk memanipulasi DOM didalamnya</li>
+                    <li>Node: <i>Base class</i> untuk semua tipe data di DOM, seperti Document, Element, dan Attr. Node dalam DOM bentuknya adalah <i>Tree</i> (pohon). Artinya, dengan <i>node</i> dapat melihat <i>Parent</i> (<i>node</i> diatas nya), <i>Children</i> (<i>node</i> dibawahnya), <i>Sibling</i> (<i>node</i> disebelahnya). <i>Node</i> memiliki <i>property</i> yang berisi informasi yang mereferensi ke <i>node</i> lainnya seperti ke <i>node parent</i>-nya, <i>node children</i>-nya ataupun <i>node sibling</i>/sebelahnya. Selain itu, <i>node</i> juga memiliki <i>method</i> untuk memanipulasi data yang terdapat pada <i>node</i> tersebut</li>
+                    <li>Element: Representasi <i>object</i> element HTML di halaman web, misal head, body, form, input, dan lain-lain. <i>Element</i> merupakan turunan dari <i>node</i> yang berarti semua <i>property</i> dari <i>node</i> dapat digunakan di <i>element</i>. Selain itu, karena <i>element</i> turunan dari <i>node</i>, <i>element</i> juga dapat menggunakan <i>method</i> yang dimiliki oleh <i>node</i> </li>
+                    <li>NodeList: <i>Array/collection</i> yang berisikan <i>node</i></li>
+                    <li>Attr/Attribute: Representasi <i>object attribute</i> dalam <i>element</i></li>
+                    <li>NamedNodeMap: <i>Collection</i> yang berisikan Attr dalam bentuk Map</li>
+                </ol>
+            </section>
+        </article>
+    </main>
+</body>
+</html>
