@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML and Javascript DOM</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .code-container {
+      padding: 1rem 2rem;
+      margin: 1rem;
+      background-color: aliceblue;
+    }
+
+  </style>
+</head>
+<body>
+  <section>
+    <h1>Javascript & DOM #1 - Pendahuluan</h1>
+    <hr>
+    <p>
+      DOM (document object model) merupakan programing interface untuk HTML yang merepresentasikan halaman web sehingga program dapat mengubah dan memanipulasi strukturnya. ~ Mozila
+    </p>
+    <p>
+      Ketika kita membuat sebuah file html, yang kemudian dibuka di browser, maka element-eement dalam html tersebut akan dibaca dan direpresentasikan sebagai object oleh browser. Representasi ini disimpan dengan nama pohon hirarki DOM (DOM Tree).
+    </p>
+    <p>
+      Document sebenarnya meurpakan node dari object yang lebih tinggi, yaitu Window. didalam window terdapat beberapa node yaitu: document, history, dan location. 
+    </p>
+    <p>
+      Dengan menggunakan dom, kita dapat mengakses dan manipulasi elemen-elemen html dengan javascript. Contohnya: membuat/menghapus elemen html, event handling, menambahkan atribute, mengubah text, dsb.
+    </p>
+  </section>
+  
+  <br>
+
+  <section>
+    <h1>Javascript & DOM #1 - DOM Tree</h1>
+    <hr>    
+    <p>
+      Setiap node pada DOM tree memiliki tipenya masing-masing, misalnya: element, attribute, text, dsb. 
+    </p>
+    
+    <h3>NodeList & HTML Collection:</h3>
+    <ul>
+      <li>
+        <strong>Node List:</strong> merupakan kumpulan dari document node yang memiliki tipe berbeda- beda.
+      </li>
+      <li>
+        <strong>HTML Collection:</strong> merupakan kumpulan dari document node yang memiliki tipe yang sama. HTML collection ini bersifat live. 
+      </li>
+    </ul>
+    
+    <h3>Struktur Hierarki DOM:</h3>
+    <ul>
+      <li>
+        <strong>Root Node:</strong> merupakan node yang menjadi sumber dari semua node lain di dalam DOM, yang mana secara default node ini adalah document. 
+      </li>
+      <li>
+        <strong>Parent Node:</strong> merupakan node yang berada 1 tingkat diatas node yang lain. Apabila sebuah node berada 2 tingkat diatas node lain maka node tersebut disebut grandparent, apabila 3 tingkat atau lebih maka disebut anchestor. 
+      </li>
+      <li>
+        <strong>Child Node:</strong> merupakan node yang berada 1 tingkat dibawah node yang lain. Apabila terdapat beberapa node yang memiliki parent yang sama maka disebut siblings, sedangkan apabila sebuah node berada 2 tingkat atau lebih dari node lain maka node tersebut disebut dengan decendant.   
+      </li>
+    </ul>
+  </section>
+  
+  <br>
+
+  <section>
+    <h1>Javascript DOM ~ Programmer Zaman Now</h1>
+    <hr>
+    <h3>DOM dan Javascript</h3>
+    <ul>
+      <li>DOM bukan fitur atau bahasa pemrograman, DOM merupakan representasi Object dari struktur halaman web.</li>
+      <li>DOM bukan bagian dari javascript, melainkan bagian dari WEB API.</li>
+      <li>DOM didesain secara agnostik, yang artinya dapat digunakan pada bahasa pemrograman apapun.</li>
+    </ul>
+
+    <h3>Document</h3>
+    <p>
+      Document merupakan representasi object dari halaman web. Dalam satu halaman web terdapat satu document yang sudah secara otomatis digenerate oleh browser ketika membaca file html. Document memiliki banyak sekali properties, contohnya: title, head, body, links, dsb. 
+    </p>
+    
+    <h4>Document Method</h4>
+    <p>
+      Document memiliki banyak method yang biasanya digunakan untuk emmanipulasi data DOM, misalnya membuat node, element, attribute, atau melakukan seleksi pada node yang sudah ada pada document.  
+    </p>
+    
+    <h4>Contoh seleksi node:</h4>
+    <div class="code-container">
+      <code>
+        const tulisan = document.getElementById("tulisan");
+        <br>
+        console.log(tulisan);
+      </code>
+    </div>
+    
+    <br>
+
+    <h3>Node</h3>
+    <p>Node adalah base class dari docuemnt, element, dan attribute sehingga semua fitur yang dimiliki pada node dimiliki oleh turunannya. Node dalam DOM direpresentasikan sebagai Tree (Pohon DOM) sehingga terdapat beberapa hierarki seperti parrent, child, siblings, dsb.</p>
+    
+    <h4>Node Property</h4>
+    <p>Node memiliki banyak sekali property. Diantara properti tersebut terdapat banyak propperty yang berfungsi sebagai reference ke node lainnya seperti reference ke node parent, children, atau siblingsnya.</p>
+
+    <h4>Contoh:</h4>
+    <div class="code-container">
+      <code>
+        // select node<br>
+        const tulisan = document.getElementById("tulisan");
+        <br><br>
+        // accessing the properties<br>
+        console.log(tulisan.textContent);
+        console.log(tulisan.nextSibling);
+        console.log(tulisan.previousSibling);
+      </code>
+    </div>
+
+    <h4>Node Method</h4>
+    <p>Method pada node dapat digunakan untuk memanipulasi data node tersebut. misalnya menambah/menghapus Node children.</p>
+    
+    <br/>
+    <h3>Element</h3>
+    <p>
+      Element merupakan node yang berbentuk element, yang biasanya merupakan elemen HTML seperti head, body, div, table, dsb. 
+    </p>
+
+    <h4>Element Properties & Methods</h4>
+    <p>
+      Elemen juga merupakan turunan dari node sehingga semua fitur properties dan juga method dari node juga bisa digunakan pada elemen.
+    </p>
+
+    <h4>Contoh:</h4>
+    <div class="code-container">
+      <code>
+        // select node<br>
+        const elemen = document.getElementById("container");
+        <br><br>
+        // DOM manipulation <br>
+        const node = document.createElement("p");
+        <br>
+        node.innerText = "lorem ipsum."
+        <br>
+        elemen.appendChild(node);
+      </code>
+    </div>
+  </section>
+</body>
+</html>
