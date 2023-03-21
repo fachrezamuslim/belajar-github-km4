@@ -1,120 +1,139 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-/* Add a gray background color with some padding */
-body {
-  font-family: Arial;
-  padding: 20px;
-  background: #f1f1f1;
-}
+    /* Add a gray background color with some padding */
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #f1f1f1;
+    }
 
-/* Header/Blog Title */
-.header {
-  padding: 30px;
-  font-size: 40px;
-  text-align: center;
-  background: white;
-}
+    /* Header/Blog Title */
+    .header {
+      padding: 30px;
+      font-size: 40px;
+      text-align: center;
+      background: white;
+    }
 
-/* Create two unequal columns that floats next to each other */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 100%;
-}
+    /* Create two unequal columns that floats next to each other */
+    /* Left column */
+    .leftcolumn {
+      float: left;
+      width: 100%;
+    }
 
-/* Right column */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  padding-left: 20px;
-}
+    /* Right column */
+    .rightcolumn {
+      float: left;
+      width: 25%;
+      padding-left: 20px;
+    }
 
-/* Fake image */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
+    /* Fake image */
+    .fakeimg {
+      background-color: #aaa;
+      width: 100%;
+      padding: 20px;
+    }
 
-/* Add a card effect for articles */
-.card {
-   background-color: white;
-   padding: 20px;
-   margin-top: 20px;
-}
+    /* Add a card effect for articles */
+    .card {
+      background-color: white;
+      padding: 20px;
+      margin-top: 20px;
+    }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
+    /* Clear floats after the columns */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
 
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-  margin-top: 20px;
-}
+    /* Footer */
+    .footer {
+      padding: 20px;
+      text-align: center;
+      background: #ddd;
+      margin-top: 20px;
+    }
 
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 800px) {
-  .leftcolumn, .rightcolumn {   
-    width: 100%;
-    padding: 0;
-  }
-}
-</style>
+    /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 800px) {
+
+      .leftcolumn,
+      .rightcolumn {
+        width: 100%;
+        padding: 0;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="header">
-  <h2>Ringkasan SEO</h2>
-</div>
+  <div class="header">
+    <h2>Ringkasan SEO</h2>
+  </div>
 
-<div class="row">
-  <div class="leftcolumn">
-    <!-- Don't add yours here ! -->
-    <div class="card">
-      <a href="https://drive.google.com/file/d/1tWQnhr0uTttIZxQ78-4UgLvBWlr-4hO1/preview">
-        <h1>Frontend Batch3</h1>
-      </a>
-      <h5>21 Maret 2023</h5>
-      <iframe src="https://drive.google.com/file/d/1tWQnhr0uTttIZxQ78-4UgLvBWlr-4hO1/preview" allow="autoplay"></iframe>
-      <p>
-        Sunt in culpa qui officia deserunt mollit anim id est laborum 
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt 
-        ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-        nostrud exercitation ullamco. quis nostrud exercitation ullamco.
-      </p>
-    </div>
+  <div class="row">
+    <div class="leftcolumn">
+      <!-- Don't add yours here ! -->
+      <div class="card">
+        <a href="https://drive.google.com/file/d/1tWQnhr0uTttIZxQ78-4UgLvBWlr-4hO1/preview">
+          <h1>Frontend Batch3</h1>
+        </a>
+        <h5>21 Maret 2023</h5>
+        <iframe src="https://drive.google.com/file/d/1tWQnhr0uTttIZxQ78-4UgLvBWlr-4hO1/preview"
+          allow="autoplay"></iframe>
+        <p>
+          Sunt in culpa qui officia deserunt mollit anim id est laborum
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+          nostrud exercitation ullamco. quis nostrud exercitation ullamco.
+        </p>
+      </div>
 
-    <!-- Add yours here -->
-    <div class="card">
-      <a href="wildan.html">
-        <h1>Wildan Faris</h1>
-      </a>
-      <h5>21 Maret 2023</h5>
-      <iframe src="https://www.youtube.com/embed/KftVVCi8IiQ" allow="autoplay"></iframe>
-      <p>
-        SEO adalah singkatan dari Search Engine Optimization atau optimasi mesin pencari.
-      </p>
+      <!-- Add yours here -->
+      <div class="card">
+        <a href="wildan.html">
+          <h1>Wildan Faris</h1>
+        </a>
+        <h5>21 Maret 2023</h5>
+        <iframe src="https://www.youtube.com/embed/KftVVCi8IiQ" allow="autoplay"></iframe>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non repudiandae tempore necessitatibus aperiam maxime
+          obcaecati omnis illum esse doloremque id. Ratione ullam repellendus aperiam voluptatibus omnis dolore sed
+          magnam ea.
+          Facilis reprehenderit quod aperiam magnam. Quam ea vero quos vitae voluptatum. Sint porro nostrum voluptates
+          velit! Itaque, eos! Consectetur, porro vero. Velit pariatur rerum possimus maiores cupiditate assumenda
+          repellat voluptatum.
+          Ullam accusamus dignissimos quisquam nulla reprehenderit sapiente. Laudantium ea minima obcaecati deleniti
+          sequi, quisquam illo, sapiente numquam veritatis nihil hic! Asperiores, rerum mollitia! Beatae adipisci
+          expedita vitae eveniet obcaecati nemo.
+          Fugit sapiente provident deleniti, necessitatibus officiis dolore quae placeat quis iste sunt! Amet
+          reprehenderit, esse hic provident, magni inventore facilis maxime porro, numquam quo necessitatibus! Nobis
+          reiciendis repudiandae quisquam magni.
+          Aliquid autem incidunt laborum aspernatur eveniet atque est, ullam molestias, eius voluptatibus officia dolor
+          commodi ducimus? Delectus temporibus distinctio totam hic aliquam veniam ullam reprehenderit nulla vel, magni,
+          omnis voluptatibus!
+        </p>
+      </div>
     </div>
   </div>
-  </div>
-</div>
 
-<div class="footer">
-  <h2>Footer</h2>
-</div>
+  <div class="footer">
+    <h2>Footer</h2>
+  </div>
 
 </body>
+
 </html>
