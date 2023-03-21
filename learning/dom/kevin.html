@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Kevin</title>
+    <style>
+        body{
+            margin-left: 5rem;
+            margin-right:  5rem;
+            text-align: justify;
+        }
+     
+    </style>
+</head>
+<body>
+    <h1>Rangkuman Documen Object Model Kevin Jeremia</h1><br>
+    <h2>Javascript & DOM #1 - Pendahuluan</h2>
+    <h3>DOM</h3>
+    <p>Untuk membuat halaman web menjadi interaktif dan menarik  dapat menggunakan Document Object Model. DOM adalah antar muka pemrograman untuk HTML yang merepresentasikan halaman web, sehingga program dapat mengubah dan memanipulasi struktur nya. Atau DOM bisa juga di artikan representasi dari elemen elemen HTML pada dokumen yang menjadi sebuah object. DOM yang tersimpan tadi akan membentuk pohon hirarki DOM atau DOM TREE. Komponen dari DOM adalah Elemen HTML, atribut, text dan lain lain </p>
+    <h3>DOM TREE</h3>      
+    <p>DOM TREE adalah hirarki yang tersimpan pada dokumen. Dimana DOM tree yang terbetuk akan sesuai dengan hirarki HTML yang di tulis. DOM TREE berguna ketika ingin menelusuri sebuah elemen yang akan digunakan. Dari setiap komponen dom di sebut juga dengan Node.
+        </p><br>
+    <h2>Javascript & DOM #2 - DOM Tree</h2>
+    <h3>DOM TREE</h3>
+    <p>DOM TREE adala hirarki berbentuk pohon yang merepesentasikan elemen, elemen dapat berisikan elemen html ,atribut, text dan lain lain yang tedapat pada browser. Setiap elemen dianggap sebagai simpul. Node pada DOM TREE memiliki banyak tipe, seperti tag html memiliki tipe element dan lain lain. </p>
+    <h3>NodeList vs HTML Collection</h3>
+    <p>NodeList adalah pemilihan lebih dari satu node dan memiliki elemen bebas, sedangkan HTML Collection berisikan node dengan hanya elemen HTML dan lebih dari satu.  Dari perbedaan ini menunjukan cara yang berbeda ketika mengelola nya. NodeList dan HTML Collection sama sama kumpulan node. Dimana struktur data nya mirip array. HTMLCollection akan bersifat live sedangkan NodeList tidak</p>
+    <h3>Struktur Hierarki DOM Tree</h3>
+    <p>Konsep dari Struktur Hierarki DOM Tree mirip dengan konsep pohon keluarga dimana memiliki parent dan juga child. Struktur Hierarki DOM di awali dengan ROOT Node yang akan menjadi sumber dari semua NODE lain di dalam dom. Parent Node adalah node yang berada 1 tingkat dari node lain. Child Node adalah node yang berada 1 tingkat dari node lain.</p>
+    <br>
+    <h2>TUTORIAL JAVASCRIPT DOM (BAHASA INDONESIA)</h2>
+    <h3>DOM</h3>
+    <p>Ketika sebuah website di load oleh browser, maka browser akan membuat Document Object model untuk halaman website nya. DOM ini berbentuk tree/pohon dimana setiap cabang nya berisi obhcet dari jenis elemen html. JavaScript dapat memanipulasi DOM, artinya dengan JavaScript, kita dapat mengkases tiap object pada DOM hingga dapat memanipulasi nya. DOM bukanlah sebuah fitur atau bahasa pemrograman, melain DOM hanya repesentasi dari Oject dari struktur halaman web. DOM adalah bagian dari Web api dan bukan bagian dari JavaSCript. DOM dapat digunakan oleh bahasa pemrograman lain tidak hanya javascript.</p>
+    <h3>Tipe Data</h3>
+    <p>DOM sangat sederhana dan mempunyai manfaat dalam penggunaan nya. Maka dari itu DOM memiliki representasi data namun tidak terlalu banyak.  Berikut adalah Tipe data dalam DOM :</p>
+    <ul>
+        <li>Document:  repesentasi dari halaman web</li>
+        <li>Node:  base class dari setiap data di DOM, seperti Document, element, attribute, text dan lain lain</li>
+        <li>Element:  representasi dari object elemn di halaman web seperti head, body, form, input dan lain lain</li>
+        <li>Node List: array/collection/kumpulan  yang berisikan node</li>
+        <li>Attr: atribut, representasi dari object atribut pada element</li>
+        <li>NameNodeMap: Collection berisikan Attr dalam bentuk map</li>
+    </ul>
+    <h3>Document</h3>
+    <p>Document adalah  repesentasi dari halaman web yang terbentuk secara otomatis di browser. Untuk meakses Document dapat menggunakan object document. Document memiliki banyak property yang berfungsi untuk melihat semua data yang tedapat dalam document halaman web. Contoh document property adalah, title, body, head, images, contentType, dan masih banyak lagi. Document juga memiliki Method yang banyak. Method digunakan untuk memanipulasi data DOM, misalkan untuk membuat Node, Element, Attribute, atau mengambil dan menyeleksi Node dalam document. </p>
+    <h3>Node</h3>
+    <p>Node adalah base class dari Document, Element dan Attr. Artinya semua fitur dari Node akan diturunkan ke node berikutnya. Node berbentuk Tree, yang artinya Node mempunyai Parent (Node di atas nya), Child(Node di sebelah nya), SIbling (Node di sebelah nya). Contoh method untuk mengambil node dapat menggunakan getElementById. Node juga memiliki banyak property, property node memiliki informasi reference/ refrensi ke node lain nya seperti node parent atau node children dan node sibling nya. Node juga memiliki Method, Method dalam node digunakan untuk memanipulasi data dalam Node, misalkan ingin menambah/menghapus node children/sibling.</p>
+    <h3>Element</h3>
+    <p>Element adalah Node yang berbentuk element, biasanya berisikan element HTML seperti <html>, <head>, <body> dan lain lain. Elemetn memiliki property, karena element adalah turunan dari Node maka property pada node dapat digunakan untuk element dan ada juga tambahan nya.  Element juga memiliki banyak method, karena element adalah turunan dari Node maka method pada node dapat digunakan untuk element dan ada juga tambahan method seperti evenListener dan lain lain. Dapat juga membuat element baru dengan method dari document.</p>
+</body>
+</html>
