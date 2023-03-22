@@ -1,0 +1,180 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan SEO - Wildan Faris</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        #loader {
+            position: absolute;
+            top: 400px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            z-index: 9999;
+        }
+
+        #loader::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 50px;
+            margin: auto;
+            border-radius: 50%;
+            border: 5px solid #ccc;
+            background-color: #fff;
+            border-top-color: #007bff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="relative flex w-full flex-wrap items-center justify-between 
+            bg-neutral-100 py-3 text-neutral-500 shadow-lg 
+            hover:text-neutral-700 focus:text-neutral-700 dark:bg-neutral-600">
+            <div class="flex w-full flex-wrap items-center justify-between p-6">
+                <div>
+                    <a class="text-xl font-semibold text-neutral-800 
+                    dark:text-neutral-200 uppercase pl-8 hover:text-neutral-700 
+                    focus:text-neutral-700" href="./wildan.html">
+                        Ringkasan SEO WILDAN
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="p-12">
+            <article>
+                    <div class="block rounded-lg shadow-lg bg-white">
+                        <div class="flex flex-wrap items-top">
+                            <div class="hidden lg:flex grow-0 shrink-0 basis-auto 
+                            lg:w-6/12 xl:w-4/12">
+                                <img 
+                                src="https://wallpapercave.com/wp/wp8111660.jpg" 
+                                alt="Mountains" 
+                                class="w-full rounded-t-lg lg:rounded-tr-none 
+                                lg:rounded-bl-lg" />
+                            </div>
+                            <div class="grow-0 shrink-0 basis-auto w-full 
+                                        lg:w-6/12 xl:w-8/12">
+                                <div class="px-6 md:px-12">
+    
+                                    <article>
+                                       <h2 class="text-2xl font-bold mb-4">Apa 
+                                            itu Search Engine Optimization ?
+                                       </h2>
+                                        	<p class="text-gray-500 mb-6">
+                                            SEO adalah singkatan dari Search 
+                                            Engine Optimization atau optimasi 
+                                            mesin pencari. singkatnya Seluruh 
+                                            usaha yang bertujuan untuk 
+                                            menempatkan website di halaman 
+                                            pertama hasil pencarian search 
+                                            engine untuk kata kunci yang 
+                                            diinginkan disebut sebagai SEO. 
+                                            Menurut Rianto Astono beberapa cara 
+                                            untuk melakukan SEO adalah dengan 
+                                            membuat content berkualitas tinggi, 
+                                            dan struktur web untuk menunjang On 
+                                            Page SEO dan Optimasi Off Page 
+                                            dengan Social sharing untuk 
+                                            meningkatkan kredibitilas web.
+                                            <br>
+                                            Tujuannya dari melakukan SEO adalah
+                                            untuk mendapatkan pengunjung dari 
+                                            hasil pencarian kata-kata kunci 
+                                            relevan di Google. Jenis traffic 
+                                            yang datang dari SEO disebut 
+                                            sebagai “organik”, “free”, “alami” 
+                                            yang bersifat gratis, kebalikan
+                                            dari traffic berbayar yang biasanya
+                                            datang dari iklan.
+                                        </p>
+                                        <p class="text-gray-500">
+                                            Rangkuman SEO For Developer in 100 
+                                            Seconds adalah create Good Content 
+                                            yang berarti dari SERP haru 
+                                            mengandung judul CTA, peforma web 
+                                            yang baik, dan konten yang relevan. 
+                                            Selain itu, SEO juga harus 
+                                            memperhatikan struktur web yang 
+                                            baik, dan bot- friendly-HTML. 
+                                            Bounce Rate yang tinggi juga harus 
+                                            dihindari, karena ini akan 
+                                            mempengaruhi ranking web pada 
+                                            ranking mesin pencari.
+                                            <br><br>
+                                            Maksud dari Bot friendly-HTML adalah 
+                                            web memiliki struktur HTML atau 
+                                            semantic sesuai dengan konten yang 
+                                            ditampilkan. Contoh image harus 
+                                            memiliki alt text, dan sebisa 
+                                            mungkin menggunakan ARIA (Accessible
+                                            Rich Internet Application) 
+                                            untuk menunjukkan struktur web pada 
+                                            pengguna disabilitas yang 
+                                            menggunakan screen reader.
+                                            <br><br>
+                                            Yang terakhir akhir dari SEO untuk 
+                                            optimalisasi kecepatan memuat web 
+                                            adalah rendering stragety, sebagai 
+                                            seorang developer penting untuk 
+                                            mengetahui cara dalam mengoptimasi 
+                                            web agar memuat halaman dengan 
+                                            cepat. Hal ini juga berkaitan dengan
+                                            pengalaman pengguna saat mengakses 
+                                            web. Terdapat beberapa rendering 
+                                            strategy yaitu Single Page 
+                                            Application, Server Side Rendering, 
+                                            Client Side Rendering dan 
+                                            Incremental Static Generartion. 
+                                            Masing-masing memiliki kelebihan dan
+                                            kekurangan dan berpengaruh terhadap 
+                                            BOT Google.
+                                        </p>
+                                    </article>
+    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </article>
+        </section>
+    </main>
+</body>
+
+<script>
+    window.addEventListener("load", function () {
+        var loader = document.createElement("div");
+        loader.setAttribute("id", "loader");
+        document.body.appendChild(loader);
+
+        setTimeout(function () {
+            document.getElementById("loader").style.display = "none";
+        }, 1000);
+    });
+
+</script>
+
+</html>
