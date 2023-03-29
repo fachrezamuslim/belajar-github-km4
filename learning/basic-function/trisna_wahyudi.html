@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ringkasan Javascript Function</title>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        max-width: 1024px;
+        margin: 0 auto;
+      }
+
+      .code_container {
+        padding: 1rem 2rem;
+        margin: 1rem 0;
+        background-color: aliceblue;
+      }
+
+      .list_header {
+        margin-bottom: 0;
+      }
+
+      ul {
+        margin-top: 0;
+      }
+
+      .list-paragraph {
+        margin: 0;
+      }
+
+      .text_center {
+        text-align: center;
+      }
+
+      @media screen and (max-width: 1024px) {
+        body {
+          max-width: 768px;
+        }
+      }
+
+      @media screen and (max-width: 768px) {
+        body {
+          max-width: 576px;
+        }
+      }
+
+      @media screen and (max-width: 576px) {
+        body {
+          margin: 0 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h1>Apa itu Function?</h1>
+      <hr />
+      <p>
+        Javascript dibentuk dari kumpulan function, yang mana Function sendiri
+        merupakan sebuah sub-program yang dapat dipanggil di bagian lain pada
+        program. Function juga disebut sebagai procedure atau kumpulan statement
+        yang dapat melakukan tugas tertentu atau menghitung sebuah nilai.
+      </p>
+      <p class="list_header">
+        Function dibuat untuk mengatasi beberapa permasalahan yaitu:
+      </p>
+      <ul>
+        <li>Meningkatkan Reusability dalam program yang dibuat (DRY)</li>
+        <li>Mengurangi Kompleksitas dari program yang dibuat</li>
+        <li>
+          Implementasi modularitas dalam program sehingga memudahkan dalam
+          debugging
+        </li>
+      </ul>
+      <p class="list_header">
+        Function sendiri dapat dikategorikan menjadi 2, yaitu:
+      </p>
+      <ul>
+        <li>
+          <strong>Built-in Function</strong>
+          <p class="list-paragraph">
+            Function yang sudah disediakan/dibuat oleh javascript yang sudah
+            ready untuk dipanggil/digunakan. Contohnya: alert, confirm, dan
+            prompt.
+          </p>
+        </li>
+        <li>
+          <strong> User-Defined Function </strong>
+          <p class="list-paragraph">
+            Function yang dibuat oleh programmer itu sendiri. User defined
+            function dibuat dengan menggunakan keyword
+            <strong>"function"</strong>.
+          </p>
+          <p class="list-paragraph">
+            User-defined function dapat memiliki nama function (optional) dan
+            dapat memiliki parameter yang disimpan dalam kurung, dan dipisahkan
+            dengan koma apabila lebih dari 1. Function body disimpan dalam
+            kurung kurawal dan didalamnya dapat memiliki return value atau
+            tidak.
+          </p>
+
+          <div class="code_container">
+            <code>
+              <p>//Function declaration</p>
+              <p>function Add(num1, num2) {</p>
+              <p style="margin-left: 2rem">let result = num1 + num2;</p>
+              <p style="margin-left: 2rem">return result;</p>
+              <p>}</p>
+              <br />
+              <p>//Function dipanggil</p>
+              <p>console.log(Add(3+4)); //output: 4</p>
+            </code>
+          </div>
+
+          <p class="list-paragraph">
+            Function dapat disimpan kedalam variable sehingga dapat dipanggil
+            dengan nama variable tersebut. Contohnya adalah sebagai berikut:
+          </p>
+
+          <div class="code_container">
+            <code>
+              <p>//Function declaration</p>
+              <p>const Add = function(num1, num2) {</p>
+              <p style="margin-left: 2rem">let result = num1 + num2</p>
+              <p style="margin-left: 2rem">return result</p>
+              <p>}</p>
+              <br />
+              <p>//Function dipanggil</p>
+              <p>console.log(Add(3+4)); //output: 4</p>
+            </code>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <br />
+    <!-- membuat function -->
+    <section>
+      <h1>Membuat Function</h1>
+
+      <hr />
+
+      <p>
+        Function biasanya bekerja dengan menerima sebuah input terlebih dahulu
+        yang kemudian diolah kedalam function yang nantinya akan menghasilkan
+        suatu output tertentu.
+      </p>
+
+      <div class="code_container text_center">
+        <p><i>"function yang baik hanya mengerjakan 1 hal spesifik saja"</i></p>
+      </div>
+
+      <h3>Parameter dan Argument</h3>
+      <p>
+        Parameter merupakan variabel yang ditulis dalam kurung pada saat
+        function dibuat. Parameter ini digunakan untuk menampung nilai yang
+        dikirimkan yang akan dipanggil pada saat function dipanggil.
+      </p>
+
+      <p>
+        Argument merupakan nilai yang dikirimkan ke parameter pada saat function
+        dipanggil. Argument dapat dikirim langsung sebagai value, atau bisa juga
+        nilai argument disimpan kedalam variable terlebih dahulu baur kemudian
+        dikirim sebagai argument. Argument dapat diberi operasi apapun, misalnya
+        expresi aritmatika, parsing data tipe, dsb.
+      </p>
+
+      <h3>Parameter and Argument Behaviors</h3>
+      <ul>
+        <li>
+          jika parameter lebih sedikit dari argument maka argument kelebihannya
+          akan diabaikan.
+        </li>
+        <li>
+          jika argument lebih sedikit dari parameter maka parameter kelebihannya
+          akan diberi nilai default. Nilai default dapat ditentukan spesific
+          atau secara default nilainya adalah undifined.
+        </li>
+      </ul>
+      <p>
+        Function sebenarnya memiliki sebuah pseudo element yang disebut dengan
+        <strong>arguments</strong>. Arguments akan menampung semua argument yang
+        dikirimkan saat function dipanggil.
+      </p>
+
+      <!-- refactoring -->
+      <h3>Refactoring</h3>
+      <p>
+        Refactoring merupakan sebuah proses untuk mengubah kode yang kita tulis
+        agar menjadi lebih baik lagi tanpa mengubah fungsionalitas dari program
+        itu sendiri.
+      </p>
+
+      <p class="list_header">Alasan dilakuakn refactoring</p>
+      <ul>
+        <li class="list_paragraph">
+          Meningkatkan code readability atau kemudahan dalam membaca kode
+          program. Program yang baik adalah program yang mudah dibaca, tidka
+          hanya oleh yang membuat tetapi juga dapat dipahami oleh orang lain.
+        </li>
+        <li class="list_paragraph">
+          Implementasi DRY (Do not Repeat Yourself), yaitu penggunaan bagian
+          kode secara efisien misalnya penggunaan variable, function, method,
+          dsb.
+        </li>
+        <li class="list_paragraph">
+          Testability, yaitu penulisan kode yang baik agar mudah saat dilakukan
+          testing
+        </li>
+        <li class="list_paragraph">
+          Meningkatkan performance pada program, misalnya pemilihan tipedata
+          yang tepat, alokasi memory yang efektif, dsb.
+        </li>
+        <li class="list_paragraph">
+          Meningkatkan maintainabillity, yaitu bagaimana program dapat dengan
+          mudah dikelola dan dikembangkan
+        </li>
+      </ul>
+    </section>
+
+    <br />
+
+    <!-- variable scope -->
+    <section>
+      <h1>Variable Scope</h1>
+      <hr />
+      <p>
+        Scope marupakan sebuah istilah yang artinya lingkup variable, atau
+        bagaimana sebuah variable dapat diaksess dalam program.
+      </p>
+      <h3 class="list_header">Konsep Scope</h3>
+      <ul>
+        <li class="list_paragraph">
+          <p><strong>Block Scope</strong></p>
+          <p>
+            Block scope digunakan oleh bahasa pemrograman seperti C dan Java.
+            Variable yang disebut block scope merupakan variable yang
+            dideklarasikan didalam kurung kurawal "{ ... }".
+          </p>
+        </li>
+        <li class="list_paragraph">
+          <p><strong>Function Scope</strong></p>
+          <p>
+            variable yang mengimplementasikan function scope merupakan variable
+            yang dideklarasikan didalam function dan hanya dapat diakses dalam
+            function tersebut saja.
+          </p>
+        </li>
+      </ul>
+      <h3 class="list_header">Behavior variable pada javascript</h3>
+      <ul>
+        <li class="list_paragraph">
+          Variable yang dideklarasikan pada object terluar (window) pada program
+          disebut sebagai global scope atau window scope yang dapat digunakan
+          dimanapun pada program.
+        </li>
+        <li class="list_paragraph">
+          Variable yang dideklarasikan didalam sebuah function disebut dengan
+          function scope atau local scope. Variable ini hanya dapat diakses pada
+          function tersebut saja.
+        </li>
+        <li class="list_paragraph">
+          Variable pada function scope dapat memiliki nama yang sama dengan
+          global variable. Jika ini terjadi maka, apabila nama variable
+          dipanggil maka nilai yang dikeluarkan akan sesuai dengan nilai yang
+          dideklarasikan pada scope masing-masing. (local variable tidak menimpa
+          global variable).
+        </li>
+        <li class="list_paragraph">
+          Apabila didalam function terdapat value assignment kedalam variable
+          tanpa ada decaration keyword (var, let, const) maka nilai global
+          variable akan ditimpa.
+        </li>
+        <li class="list_paragraph">
+          Apabila pada window tidak ada declaration keyword, maka javascript
+          akan otomatis membuat declaration keyword pada global scope. Untuk
+          mencegah hal ini terjadi kita dapat menggunakan keyword "use strict".
+        </li>
+        <li class="list_paragraph">
+          Parameter dan argument memiliki sifat local scope pada function.
+        </li>
+      </ul>
+
+      <h3>Declaration vs Expression</h3>
+      <p>Function declaration :</p>
+      <div class="code_container">
+        <code>
+          function identifier (ParameterList <small>opt</small>) {FuntionBody}
+        </code>
+      </div>
+      <p>Function expression :</p>
+      <div class="code_container">
+        <code>
+          function identifier <small>opt</small> (ParameterList
+          <small>opt</small>) {FuntionBody}
+        </code>
+      </div>
+
+      <p class="list_header">
+        Function expression baru dapat disebut sebagai function expression
+        apabila sebuah function disimpan kedalam sebuah variable. Function
+        expression memeiliki beberapa sifat :
+      </p>
+      <ul>
+        <li>
+          Lebih Flexible (dapat ditulis dimanapun) karena javascript memiliki
+          konsep hoisting (deklarasi sebuah function akan disimpan terlebih
+          dahulu dalam memory).
+        </li>
+        <li>Cenderung lebih mudah dipahami oleh pemula</li>
+      </ul>
+      <p>
+        Function expression harus didefinisikan terlebih dahulu sebelum
+        dipanggil. Funtion expression lebih powerfull dibanding funtion
+        declaration, karena dapat digunakan sebagai closure, dapat digunakan
+        sebagai argument untuk funtion lain, dan dapat digunakan untuk IIFE
+        (Immediately Infoked Funtion Expression).
+      </p>
+    </section>
+  </body>
+</html>
