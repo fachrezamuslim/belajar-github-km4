@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ringkasan Belajar Fungsi Wildan Faris</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
+
+    <!-- Style Page -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Poppins", sans-serif;
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+      }
+
+      nav ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        text-align: right;
+      }
+
+      nav li {
+        display: inline-block;
+        margin-left: 20px;
+      }
+
+      nav a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      main {
+        flex: 1;
+        padding: 20px;
+      }
+
+      article {
+        border: 1px solid #ccc;
+        padding: 20px;
+      }
+
+      article h2 {
+        font-size: 24px;
+        margin-top: 0;
+      }
+
+      article p.meta {
+        font-style: italic;
+        font-size: 14px;
+      }
+
+      article footer {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+
+      article footer a {
+        text-decoration: none;
+      }
+
+      article footer .tags a:not(:last-child):after {
+        content: ", ";
+      }
+
+      footer {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+      }
+
+      /* scroll up button */
+      .scroll-up-btn {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #333;
+        color: #fff;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        font-size: 30px;
+        line-height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .scroll-up-btn:hover {
+        opacity: 0.7;
+      }
+
+      /* prevent change link color  */
+      a:link {
+        color: blue;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: #ffffff;
+      }
+
+      a:hover {
+        color: yellow;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1><a href="wildan.html">Ringkasan Belajar Wildan Faris</a></h1>
+      <nav>
+        <ul>
+          <li><a href="#intro">Intro</a></li>
+          <li><a href="#create">Membuat & Menjalankan</a></li>
+          <li><a href="#param">Parameter & Argumen</a></li>
+          <li><a href="#refactor">Refactoring</a></li>
+          <li><a href="#variablescope">Variable Scope</a></li>
+          <li><a href="#declaration">Declaration vs Expression</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <article>
+        <header>
+          <h2 id="intro">FUNCTION pada JAVASCRIPT : Intro</h2>
+          <p class="meta">
+            Posted on <time datetime="2023-03-30">March 30, 2023</time> by
+            <a href="wildan.html">Wildan</a>
+          </p>
+        </header>
+
+        <h3>Perkenalan Function</h3>
+
+        <p>
+          Funtion merupakan struktur dasar pembentuk dari javascript. Untuk
+          dapat menggunakan function, kita harus membuat function terlebih
+          dahulu untuk bisa digunakan dengan cara memanggil function tersebut.
+          Function termasuk kedalam first class object, yang artinya function
+          dapat disimpan dalam variabel, array, object, dan dapat juga
+          dikirimkan sebagai parameter ke function lainnya.
+        </p>
+
+        <p>
+          Dengan menggunakan function kita dapat melakukan reusability atau
+          <i>DRY (Don't Repeat Yourself)</i>, serta melakukan dekomposisi dan
+          modularitas yang artinya kita dapat memecah suatu program menjadi
+          beberapa bagian yang lebih kecil. Dengan demikian, kita dapat memahami
+          dan mengelola program yang kita buat dengan lebih mudah.
+        </p>
+
+        <p>
+          Pada javascript terdapat dua kategori function, yaitu function yang di
+          buat oleh kita sebagai programmer <i>(User-Defined Function)</i> dan
+          function yang di buat oleh javascript itu sendiri
+          <i>(Built-in-function).</i>
+        </p>
+
+        <p>
+          Untuk membuat fungsi kita sendiri kita dapat menggunakan keyword
+          function dan nama function (optional), lalu diikuti dengan tanda
+          kurung yang berisi parameter (optional), dan diakhiri dengan tanda
+          kurung kurawal yang berisi kode yang akan dijalankan ketika fungsi
+          tersebut dipanggil. Function dapat mengembalikan nilai dengan cara
+          menggunakan keyword return atau tidak.
+        </p>
+
+        <p>
+          Ada dua cara membuat function yaitu dengan cara function declaration
+          dan function expression. Perbedaanya adalah function expression
+          disimpan dalam variabel, sedangkan function declaration tidak.
+        </p>
+      </article>
+
+      <article>
+        <header>
+          <h2 id="create">
+            FUNCTION pada JAVASCRIPT : Membuat dan Menjalankan FUNCTION
+          </h2>
+          <p class="meta">
+            Posted on <time datetime="2023-03-30">March 30, 2023</time> by
+            <a href="wildan.html">Wildan</a>
+          </p>
+        </header>
+
+        <h3>Create and Run a Function</h3>
+
+        <p>
+          Function yang baik adalah function yang hanya mengerjakan satu hal
+          saja.
+        </p>
+
+        <p>
+          Sandhika Galih memberikan contoh dalam membuat function
+          jumlahVolumeDuaKubus dengan parameter a dan b. Function tersebut akan
+          mengembalikan nilai dari hasil penjumlahan volume dari dua kubus yang
+          memiliki sisi sepanjang a dan b.
+        </p>
+
+        <p>
+          Sebuah function biasanya mengembalikan sebuah nilai, dengan
+          menggunakan keyword return. Kegunaanya memberitahu interpreter bahwa
+          kita telah selesai mengerjakan sesuatu dan 'inilah' hasilnya. Setelah
+          sampai pada keyword return, interpreter akan langsung keluar dari
+          function tersebut atau berhenti berjalan.
+        </p>
+      </article>
+
+      <article>
+        <header>
+          <h2 id="param">FUNCTION pada JAVASCRIPT : PARAMETER dan ARGUMENT</h2>
+          <p class="meta">
+            Posted on <time datetime="2023-03-30">March 30, 2023</time> by
+            <a href="wildan.html">Wildan</a>
+          </p>
+        </header>
+
+        <h3>Perbedaan Parameter dan Argument ?</h3>
+
+        <p>
+          Parameter adalah variabel yang digunakan untuk menampung nilai yang di
+          kirimkan ke function ketika function tersebut dipanggil. Sedangkan
+          argument adalah nilai yang dikirimkan ke function ketika function
+          tersebut dipanggil.
+        </p>
+
+        <p>
+          Pada Javascript jika parameter lebih sedikit dari argument, maka nilai
+          yang tidak terpakai atau kelbihannya akan diabaikan. Namun jika
+          parameter lebih banyak dari argument, maka nilai yang tidak terpakai
+          akan diisi dengan nilai undefined.
+        </p>
+
+        <p>
+          Jika parameter lebih banyak dari argument, maka nilai kelebihannya
+          akan diisi dengan nilai undefined.
+        </p>
+
+        <p>
+          Pseudo variabel arguments adalah sebuah variabel yang dapat digunakan
+          di dalam function untuk mengakses semua argument yang dikirimkan ke
+          function tersebut.
+        </p>
+      </article>
+
+      <article>
+        <header>
+          <h2 id="refactor">FUNCTION pada JAVASCRIPT : REFACTORING</h2>
+          <p class="meta">
+            Posted on <time datetime="2023-03-30">March 30, 2023</time> by
+            <a href="wildan.html">Wildan</a>
+          </p>
+        </header>
+
+        <h3>Refactoring</h3>
+
+        <p>
+          Refactoring merupakan sebuah proses untuk mengubah kode program yang
+          sudah ada tanpa mengubah fungsionalitas dari program tersebut.
+          Refactoring dilakukan agar code kita lebih readability atau mudah
+          dibaca. <i>DRY (Don't Repeat Yourself)</i>, Refactoring juga dilakukan
+          agara code kita lebih reusable atau dapat digunakan kembali.
+          Meningkatkan perfoamance dari code kita, Refactoring juga dilakukan
+          agar maintanability dari code kita lebih mudah.
+        </p>
+      </article>
+
+      <article>
+        <header>
+          <h2 id="variablescope">FUNCTION pada JAVASCRIPT : VARIABLE SCOPE</h2>
+          <p class="meta">
+            Posted on <time datetime="2023-03-30">March 30, 2023</time> by
+            <a href="wildan.html">Wildan</a>
+          </p>
+        </header>
+
+        <h3>VARIABLE SCOPE ?</h3>
+
+        <p>
+          Dalam bahasa pemrograman terdapat dua jenis variable scope yaitu block
+          scope dan function scope. Block scope adalah scope yang berada di
+          dalam kurung kurawal, sedangkan function scope adalah scope yang
+          berada di dalam function. Contoh block scope adalah bahasa pemrograman
+          C. Javascript menganut function scope.
+        </p>
+
+        <p>
+          Jika kita membuat variable di dalam function, maka variable tersebut
+          di anggap sebagai variable local. Variable local hanya dapat di akses
+          di dalam function tersebut. Sedangkan jika kita membuat variable di
+          luar function, maka variable tersebut di anggap sebagai variable
+          global. Variable global dapat di akses di dalam function sedangkan
+          variabel local tidak dapat di akses di luar function.
+        </p>
+
+        <p>
+          Sandhika Galih memberikan contoh apabila kita membuat variable di
+          dalam function tanpa memberikan keyword var. Variable tersebut akan
+          dianggap sebagai variable global.
+        </p>
+      </article>
+
+      <article>
+        <header>
+          <h2 id="declaration">
+            FUNCTION pada JAVASCRIPT : DECLARATION vs. EXPRESSION
+          </h2>
+          <p class="meta">
+            Posted on <time datetime="2023-03-30">March 30, 2023</time> by
+            <a href="wildan.html">Wildan</a>
+          </p>
+        </header>
+
+        <h3>DECLARATION vs. EXPRESSION</h3>
+
+        <p>
+          Untuk penulisan function declaration kita harus menuliskan function
+          identifier (parameterList opt) dan {function body}. Sedangkan untuk
+          penulisan function expression kita harus menuliskan function
+          identifier optional (parameterList opt) dan {function body}.
+        </p>
+
+        <p>
+          Function declaration lebih fleksibel (dapat ditulis dimanapun) karena
+          konsep hoisting, dan mudah dipahami pemula. Sedangkan function
+          expression harus didefinisikan terlebih dahulu sebelum digunakan.
+          Lebih powerfull sebagai closure, sebagai argumen untuk function lain
+          dan IIIFE (Immediately Invoked Function Expression).
+        </p>
+      </article>
+    </main>
+
+    <!-- Scroll up button -->
+    <div class="scroll-up-btn">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <footer>
+      <p>&copy; 2023 WILDAN - MKA</p>
+    </footer>
+  </body>
+
+  <script>
+    // Scroll up button
+    const scrollBtn = document.querySelector(".scroll-up-btn");
+
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset > 300) {
+        scrollBtn.style.opacity = "1";
+      } else {
+        scrollBtn.style.opacity = "0";
+      }
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  </script>
+</html>
