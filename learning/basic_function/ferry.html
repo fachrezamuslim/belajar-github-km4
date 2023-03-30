@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ringkasan Belajar Fungsi</title>
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <style>
+      body {
+        width: 60%;
+        margin: auto;
+        font-family: "Poppins", sans-serif;
+      }
+      article {
+        padding: 20px;
+        margin-top: 20px;
+        font-family: Poppins;
+        border-radius: 5px;
+        border-color: black;
+        border-style: solid;
+      }
+      p {
+        font-size: 16px;
+      }
+      pre {
+        background-color: rgb(26, 26, 26);
+        font-size: 15px;
+        color: azure;
+        padding: 10px;
+        border-radius: 10px;
+      }
+      @media screen and (max-width: 479px) {
+        body {
+          width: 80%;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        body {
+          width: 80%;
+        }
+      }
+      @media screen and (max-width: 991px) {
+        body {
+          width: 80%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <article>
+      <h1 style="text-align: center">FUNCTION pada JAVASCRIPT</h1>
+
+      <h2>#1 Intro</h2>
+
+      <p>
+        Menurut Douglas Crockford, function adalah kunci utama pada javascript yang membuat javascript sangat powerfull.
+      </p>
+
+      <p>Menurut fungsi nya, function pada Javascript adalah:</p>
+      <ul>
+        <li>Function adalah sub-program / sub-routine yang dapat dipanggil di bagian lain pada program.</li>
+        <li>
+          Struktur dasar pembentuk dari JS Disebut juga sebagai prosedur atau kumpulan statement yang melakukan tugas /
+          menghitung sebuah nilai
+        </li>
+        <li>Harus dibuat terlebih dahulu agar dapat digunakan Termasuk ke dalam First-Class Object</li>
+      </ul>
+      <p>Kenapa harus buat function:</p>
+      <ul>
+        <li>Reusability (dapat digunakan berulang-ulang)</li>
+        <li>Dekomposisi (menyembunyikan kompleksitas program)</li>
+        <li>Modularitas</li>
+      </ul>
+
+      <p>
+        Kategori Function: Built-in function (fungsi yang sudah disediakan) User-defined function (fungsi yang dibuat
+        user)
+      </p>
+
+      <p>Cara buat function: Dengan deklarasi Dengan ekspresi</p>
+
+      <h2>#2 Membuat dan Menjalankan FUNCTION</h2>
+
+      <p>Function memiliki inputan lalu mengerjakan function tersebut dan menghasilkan output.</p>
+
+      <p>Function yang baik hanya mengerjakan satu tugas.</p>
+
+      <p>sintaks function:</p>
+
+      <pre><code>function namaFunction(parameter/argumen) { // blok kode }</code></pre>
+
+      <p>
+        parameter adalah data yang dikirim dari luar saat pemanggilan function parameter dianggap sebagai variable
+        khusus untuk function opsional atau boleh ada dan boleh tidak ada
+      </p>
+
+      <p>Sebuah function mengembalikan nilai dengan keyword return</p>
+
+      <p>Setelah sampai return, function akan berhenti berjalan.</p>
+
+      <h2>#3 Parameter dan Argument Function</h2>
+
+      <p>
+        Parameter adalah variable yang ditulis di dalam kurung function, parameter in digunakan untuk menampung nilai.
+      </p>
+
+      <p>Argument adalah nilai yang dikirimkan ke parameter saat fungsi dipanggil</p>
+
+      <p>Jika parameter lebih sedikit dari argument, maka argument kelebihannya akan diabaikan.</p>
+
+      <p>Jika parameter lebih banyak dari argument, maka parameter kelebihannya akan diisi dengan nilai undefined.</p>
+
+      <p>arguments adalah array yang berisi nilai yang dikirimkan saat fungsi dipanggil.</p>
+
+      <h2>#4 Refactoring Function</h2>
+
+      <p>Refactoring adalah sebuah proses mengubah kode agar menjadi lebih baik tanpa mengubah fungsionalitas.</p>
+
+      <p>Kenapa harus melakukan refactoring:</p>
+      <ul>
+        <li>mudah dibaca</li>
+        <li>mencegah duplikasi kode</li>
+        <li>mudah di uji</li>
+        <li>meningkatkan performa mudah di mantain</li>
+      </ul>
+
+      <h2>#5 Variable Scope Function</h2>
+
+      <p>Scope membahas bagaimana sebuah variable dapat diakses dalam program.</p>
+
+      <p>Js menggunakan function scope.</p>
+
+      <h2>#6 Function Declaration vs Function Epression</h2>
+
+      <p>Sintaks function declaration</p>
+
+      <pre><code>function identifier (parameter opsional ) {fumction body}</code></pre>
+
+      <p>Sintaks function expression</p>
+
+      <pre><code>function identifier opsional (parameter opsional) {function body}</code></pre>
+
+      <p>keunggulan function declaration: lebih fleksibel mudah dipahami</p>
+      <p>keunggulan function epxression: lebih powerfull tapi harus didefinisikan terlebih dahulu</p>
+    </article>
+  </body>
+</html>
