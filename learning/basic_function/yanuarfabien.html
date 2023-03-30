@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Belajar Fungsi Yanuar Fabien</title>
+    <style>
+        body{
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+        }
+        main{
+            max-width: 1140px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        article section{
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <main>
+      <article>
+        <header>
+          <h1>Ringkasan Belajar Fungsi Yanuar Fabien</h1>
+        </header>
+
+        <section>
+          <h2>Video 1: "FUNCTION pada JAVASCRIPT : Intro"</h2>
+          <p>Function adalah sebuah sub-program/sub-routine yang dapat
+            <i>'dipanggil'</i> di bagian lain pada program dan merupakan
+            struktur dasar pembentuk JavaScript. Function juga disebut sebagai
+            prosedur (kumpulan <i>statement</i> untuk melakukan tugas atau
+            menghitung suatu nilai). Untuk dapat menggunakannya, kita harus
+            <i>'membuat'</i> terlebih dahulu function tersebut, lalu
+            <i>'memanggil'</i>-nya. Function termasuk kedalam First-Class
+            Object.Adapun alasan penggunaan function yaitu:</p>
+          <ol>
+            <li>Reusability (DRY: Don't Repeat Yourself)</li>
+            <li>Dekomposisi / Abstraksi</li>
+            <li>Modularitas</li>
+          </ol>
+          Function memiliki 2 kategori yaitu:
+          <ol>
+            <li>Built-in Function: fungsi yang disediakan oleh JavaScript dan
+              kita tinggal <i>'memanggil'</i>-nya contohnya alert(), prompt(),
+              confirm()</li>
+            <li>User-defined Function: fungsi yang kita buat sendiri dengan
+              menggunakan keyword function. Pada function terdapat nama function
+              (optional), parameter/argument, dan body. User-defined function
+              dapat mengembalikan nilai (return value) atau tidak. Adapun
+              beberapa cara untuk membuat User-defined Function yaitu:
+              <ul>
+                <li>
+                  Dengan deklarasi / function declaration yang dapat dibuat
+                  dengan sintaks:
+                  <br>
+                  <code>function namaFunction(param1, param2) { body }</code>
+                </li>
+                <li>
+                  Dengan ekspresi / function expressions yang dapat dibuat
+                  dengan sintaks:
+                  <br>
+                  <code>var namaFunction = function (param1, param2) { body
+                    }</code>
+                </li>
+              </ul>
+            </li>
+          </ol>
+          <p>
+            Adapun cara untuk memanggil function yaitu dengan menuliskan
+            sintaks:
+            <br>
+            <code>namaFunction()</code>
+          </p>
+        </section>
+        <section>
+          <h2>Video 2: "FUNCTION pada JAVASCRIPT : Membuat dan Menjalankan
+            FUNCTION"</h2>
+          <p>Secara sederhana, ketika kita bekerja dengan sebuah function
+            biasanya kita akan memiliki nilai yang nantinya akan menjadi
+            bahan/material yang akan diproses oleh function untuk menghasilkan
+            suatu output. Function yang baik adalah function yang mengerjakan
+            satu tugas saja. Blok kode yang dibuat dalam function diperuntukkan
+            suatu untuk tugas spesifik, dapat dipanggil berulang kali
+            (Reusability) serta memudahkan penelusuran.</p>
+        </section>
+        <section>
+          <h2>Video 3: "FUNCTION pada JAVASCRIPT : PARAMETER dan ARGUMENT"</h2>
+          <p>Parameter adalah variabel yang ditulis didalam kurung pada saat
+            function dibuat dan digunakan untuk menampung nilai yang dikirimkan
+            saat function dipanggil. Argument adalah nilai yang dikirimkan ke
+            parameter saat fungsi dipanggil. Untuk lebih jelas dapat dilihat
+            pada contoh kode dibawah.</p>
+          <ol>
+            <li>
+              Contoh penulisan parameter saat membuat function adalah:
+              <br>
+              <code>
+                function namaFunction(parameter)
+                {
+                // perintah untuk melakukan tugas terhadap parameter
+                }
+              </code>
+            </li>
+            <li>
+              Contoh penulisan argument saat memanggil function adalah:
+              <br>
+              <code>
+                namaFunction(argument)
+              </code>
+            </li>
+          </ol>
+          <p>Adapun variabel yang bernama arguments yang menyimpan nilai array
+            dari semua argument yang dikirim pada function. Adapun yang terjadi
+            ketika jumlah parameter saat fungsi dibuat berbeda dengan jumlah
+            argument yang dikirim yaitu:</p>
+          <ol>
+            <li>Jika jumlah parameter saat fungsi dibuat lebih banyak dari
+              jumlah argument yang dikirim saat memanggil fungsi maka parameter
+              yang tidak diisi bernilai undefined</li>
+            <li>Jika jumlah parameter saat fungsi dibuat lebih sedikit dari
+              jumlah argument yang dikirim saat memanggil fungsi maka argument
+              tersebut tetap tersimpan pada fungsi</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Video 4: "FUNCTION pada JAVASCRIPT : REFACTORING"</h2>
+          <p>Refactoring adalah sebuah proses mengubah kode agar lebih 'baik'
+            tanpa mengubah fungsionalitasnya. Adapun beberapa faktor mengapa
+            refactoring harus dilakukan yaitu:</p>
+          <ol>
+            <li>Readibility: kemudahan dalam membaca kode program</li>
+            <li>DRY (Don't Repeat Yourself): duplikasi kode</li>
+            <li>Testability: penulisan koda agar mudah saat proses pengujian
+            </li>
+            <li>Performance: bagaimana cara menulis kode yang dapat meningkatkan
+              performa dari program yang dibuat</li>
+            <li>Maintainability: bagaimada program dapat dengan mudah dikelola
+              atau dikembangkan</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Video 5: "FUNCTION pada JAVASCRIPT : VARIABLE SCOPE"</h2>
+          <p>Scope adalah bagaimana cara sebuah variabel dapat diakses dalam
+            program. Dalam bahasa pemrograman terdapat dua jenis scope yaitu:
+          </p>
+          <ol>
+            <li>block scope: variabel yang dibuat didalam block scope tidak
+              dapat digunakan diluar dari block-nya. block scope digunakan pada
+              bahasa pemrograman seperti C dan Java</li>
+            <li>function scope: variabel yang dibuat didalam block scope dapat
+              digunakan diluar dari block-nya. block scope digunakan pada bahasa
+              pemrograman seperti Javascript</li>
+          </ol>
+          <p>Dalam Javascript, ketika variabel dibuat tanpa dibungkus scope
+            disebut global scope atau window scope. Global scope atau window
+            scope dapat diakses pada block scope manapun. Deklarasi variabel
+            didalam block scope atau saat menjadi parameter dengan nama yang
+            sama dengan variabel global scope akan menjadi 2 variabel yang
+            berbeda.</p>
+        </section>
+        <section>
+          <h2>Video 6: FUNCTION pada JAVASCRIPT : DECLARATION vs. EXPRESSION
+          </h2>
+          <p>
+            Rumus dari Function Declaration yaitu:
+            <br>
+            <code>function namaFunction(listParameter <sub>opt</sub>) {
+              FunctionBody }</code>
+          </p>
+          <p>
+            Rumus dari Function Expression yaitu:
+            <br>
+            <code>function namaFunction<sub>opt</sub>
+              (listParameter<sub>opt</sub>) { FunctionBody }</code>
+          </p>
+          <p>Adapun perbedaan dari Function Declaration dan Function Expression
+            yaitu:</p>
+          <ul>
+            <li>
+              Function Declaration:
+              <ol>
+                <li>Lebih fleksibel (dapat ditulis dimanapun) karena pada
+                  javascript ada konsep Hoisting dimana deklarasi sebuah
+                  function pasti disimpan terlebih dahulu didalam memory</li>
+                <li>Mudah dipahami pemula</li>
+              </ol>
+            </li>
+            <li>
+              Function Expression:
+              <ol>
+                <li>Harus didefinisikan terlebih dahulu sebelum dipanggil</li>
+                <li>Lebih powerfull:
+                  <ul>
+                    <li>Sebagai closure</li>
+                    <li>Sebagai argumen untuk function lain</li>
+                    <li>IIFE (Immediately Invoked Function Expression)</li>
+                  </ul>
+                </li>
+              </ol>
+            </li>
+          </ul>
+        </section>
+      </article>
+    </main>
+</body>
+</html>
